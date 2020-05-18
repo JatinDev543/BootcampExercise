@@ -1,0 +1,126 @@
+
+
+{
+  set {
+  
+    _:Machine1 <name> "Tractor" .
+    _:Machine1 <model> "1995" .
+    _:Machine1 <MachineID> "M01" .
+    _:Machine1 <dgraph.type> "Machine" .
+   _:Machine2 <name> "Tracked tractor" .
+   _:Machine2 <model> "1985" .
+    _:Machine2 <MachineID> "M02" .
+    _:Machine2 <dgraph.type> "Machine" . 
+       _:Machine3 <name> "Cultivator" .
+    _:Machine3 <dgraph.type> "Machine" .
+    _:Machine3 <model> "2005" .
+    _:Machine3 <MachineID> "M03" . 
+        _:Machine4 <name> "Cultipacker" .
+    _:Machine4 <dgraph.type> "Machine" .
+    _:Machine4 <model> "2007" .
+    _:Machine4 <MachineID> "M04" .
+            _:Machine5 <name> "Chisel plow" .
+    _:Machine5 <dgraph.type> "Machine" .
+    _:Machine5 <model> "2008" .
+    _:Machine5 <MachineID> "M05" .
+       
+ 
+    
+    
+    
+    _:person1 <name> "Jatin" .
+    _:person1 <email> "jatin@agri.io" .
+    _:person1 <dgraph.type> "Person" .
+     _:person2 <name> "Michael" .
+     _:person2 <email> "Michael@agri.io" .
+    _:person2 <dgraph.type> "Person" .
+         _:person3 <name> "Santo" .
+    _:person3 <dgraph.type> "Person" .
+    _:person3 <email> "Santo@agri.io" .
+         _:person4 <name> "Neeraj" .
+    _:person4 <dgraph.type> "Person" .
+    _:person4 <email> "Neeraj@agri.io" .
+         _:person5 <name> "Arijit" .
+    _:person5 <dgraph.type> "Person" .
+    _:person5 <email> "Arijit@agri.io" .
+
+      
+    _:deploy1 <ContractID> "C1" .
+    _:deploy1 <current> "false" .
+    _:deploy1 <startDate> "2019-10-02T10:05:05+00:00" .
+    _:deploy1 <endDate> "2019-10-03T12:05:05+00:00" .
+    
+      _:deploy1 <location> "New Dehli" .
+    _:deploy1 <dgraph.type> "Deploy" .
+    
+    _:deploy2 <ContractID> "C2" .
+    _:deploy2 <current> "true" .
+    _:deploy2 <startDate> "2020-01-05T15:15:05+00:00" .
+    _:deploy2 <endDate> "2020-06-03T17:05:05+00:00" .
+      _:deploy2 <location> "San Francisco" .
+    _:deploy2 <dgraph.type> "Deploy" .
+    
+     _:deploy3 <ContractID> "C3" .
+    _:deploy3 <current> "true" .
+    _:deploy3 <startDate> "2020-03-05T20:20:05+00:00" .
+    _:deploy3 <endDate> "2020-07-03T23:05:05+00:00" .
+      _:deploy3 <location> "Bangalore" . 
+     _:deploy3 <dgraph.type> "Deploy" .
+    
+      _:deploy4 <ContractID> "C4" .
+       _:deploy4 <current> "false" .
+    _:deploy4 <startDate> "2020-01-05T18:20:05+00:00" .
+    _:deploy4 <endDate> "2020-02-03T19:05:05+00:00" .
+      _:deploy4 <location> "Sydney" . 
+    _:deploy4 <dgraph.type> "Deploy" .
+
+     _:deploy5 <ContractID> "C5" .
+     _:deploy5 <current> "true" .
+    _:deploy5 <startDate> "2020-01-05T19:20:05+00:00" .
+    _:deploy5 <endDate> "2020-07-03T12:15:05+00:00" .
+      _:deploy5 <location> "New York" .
+    _:deploy5 <dgraph.type> "Deploy" .
+
+    
+     _:deploy6 <ContractID> "C6" .
+      _:deploy6 <current> "false" .
+    _:deploy6 <startDate> "2019-06-05T13:17:05+00:00" .
+    _:deploy6 <endDate> "2019-08-03T15:40:05+00:00" .
+      _:deploy6 <location> "Chandigarh" .
+    _:deploy6 <dgraph.type> "Deploy" .
+
+
+     _:deploy7 <ContractID> "C7" .
+      _:deploy7 <current> "false" .
+    _:deploy7 <startDate> "2019-07-05T13:17:05+00:00" .
+    _:deploy7 <endDate> "2019-12-03T15:40:05+00:00" .
+      _:deploy7 <location> "Italy" .
+    _:deploy7 <dgraph.type> "Deploy" .
+
+
+      _:Machine1 <deployement>  _:deploy1 .
+    _:Machine1 <deployement>   _:deploy2 .
+     _:Machine2 <deployement>  _:deploy3 .
+    _:Machine2 <deployement>  _:deploy4 .
+     _:Machine3 <deployement>  _:deploy5 .
+      _:Machine3 <deployement>  _:deploy7 .
+    _:Machine4 <deployement>  _:deploy6 .
+
+
+      _:person1 <deployed>  _:deploy1 .
+    _:person2 <deployed>   _:deploy2 .
+     _:person2 <deployed>  _:deploy3 .
+    _:person3 <deployed>  _:deploy4 .
+     _:person4 <deployed>  _:deploy5 .
+    _:person5 <deployed>  _:deploy6 .
+    _:person5 <deployed>  _:deploy7 .
+
+       
+
+    
+    
+  }
+  
+  }  
+
+
