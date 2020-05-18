@@ -1,0 +1,40 @@
+
+ # query to get all deployements of the machine Tractor between the given Dates
+  {
+  selectMahine(func: eq(name,"Tractor")) 
+  {
+    name 
+    C as deployement@filter(ge(startDate,2020-01-05) AND le(endDate,2020-07-07))
+    
+  }
+  
+  
+}
+  
+  {
+    MachineAndOwner(func: uid(C))
+    {
+      ContractID
+      startDate
+      endDate
+      current
+      deployedMachine:~deployement 
+      {
+         name         
+      
+      
+      }
+      owns:~deployed
+      {
+        name
+      
+      }
+      
+      
+      
+    }
+    
+    
+    
+  }
+  
