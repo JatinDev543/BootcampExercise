@@ -1,0 +1,37 @@
+//query to find out current deployement of the machine Cultivator and owner of it.
+
+{
+  selectMahine(func: eq(name,"Cultivator")) 
+  {
+    name 
+    C as deployement@filter(eq (current,true))   
+    
+  }
+  
+  
+}
+  
+  {
+    MachineAndOwner(func: uid(C))
+    {
+      name:ContractID
+      deployedMachine:~deployement 
+      {
+         name         
+      
+      
+      }
+      owns:~deployed
+      {
+        name
+      
+      }
+      
+      
+      
+    }
+    
+    
+    
+  }
+  

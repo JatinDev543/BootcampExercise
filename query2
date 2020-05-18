@@ -1,0 +1,40 @@
+
+ //query to get all deployements of the machine Tractor
+  {
+  selectMahine(func: eq(name,"Tractor")) 
+  {
+    name 
+    C as deployement 
+    
+  }
+  
+  
+}
+  
+  {
+    MachineAndOwner(func: uid(C))
+    {
+      ContractID
+      startDate
+      endDate
+      current
+      deployedMachine:~deployement 
+      {
+         name         
+      
+      
+      }
+      owns:~deployed
+      {
+        name
+      
+      }
+      
+      
+      
+    }
+    
+    
+    
+  }
+  

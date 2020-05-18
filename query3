@@ -1,0 +1,35 @@
+ //query to get all machines deployed by jatin 
+ {
+  selectMahine(func: eq(name,"Jatin")) 
+  {
+    name 
+    C as deployed
+    
+  }
+  
+  
+}
+  
+  {
+    MachineAndOwner(func: uid(C))
+    {
+      ContractID
+      startDate
+      endDate
+      current
+      deployedMachine:~deployement 
+      {
+         name         
+      
+      
+      } 
+      own:~deployed 
+      {
+         name         
+      
+      
+      } 
+      
+    }
+    
+  }

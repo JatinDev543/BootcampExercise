@@ -1,0 +1,12 @@
+<ContractID>: string @index(hash) .
+<MachineID>: string @index(hash) .
+<current>: bool .
+<deployed>: [uid] @reverse .
+<deployement>: [uid] @reverse .
+<dgraph.graphql.schema>: string .
+<email>: string @index(hash) .
+<endDate>: datetime .
+<location>: string @index(hash) .
+<model>: string .
+<name>: string @index(hash) .
+<startDate>: datetime .
