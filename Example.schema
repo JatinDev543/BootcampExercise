@@ -5,8 +5,8 @@
 <deployement>: [uid] @reverse .
 <dgraph.graphql.schema>: string .
 <email>: string @index(hash) .
-<endDate>: datetime .
+<endDate>: datetime @index(hour) .
 <location>: string @index(hash) .
 <model>: string .
 <name>: string @index(hash) .
-<startDate>: datetime .
+<startDate>: datetime @index(hour) .
